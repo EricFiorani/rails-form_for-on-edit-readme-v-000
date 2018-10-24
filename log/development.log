@@ -768,3 +768,10 @@ Started GET "/" for 108.204.79.164 at 2018-10-24 15:39:58 +0000
 Processing by Rails::WelcomeController#index as HTML
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
 Completed 200 OK in 29ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 108.204.79.164 at 2018-10-24 15:40:06 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (11.6ms)

@@ -805,3 +805,15 @@ Processing by PostsController#edit as HTML
   [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
   Rendered posts/edit.html.erb within layouts/application (20.1ms)
 Completed 200 OK in 259ms (Views: 233.9ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/posts/1" for 108.204.79.164 at 2018-10-24 15:40:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ThZbD8LTN2oLUFoypX6DOZ7doNTZ8IxBbjTaqq/DMFzJENYpydheCBMxVh3Bf6gPGiygpC2mq7Vay5Wrt6i03g==", "post"=>{"title"=>"Rails Introduction Quiz", "description"=>"asdfasdf!!!"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", nil], ["description", nil], ["updated_at", "2018-10-24 15:40:45.026462"], ["id", 1]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.90.214:43875/posts/1
+Completed 302 Found in 37ms (ActiveRecord: 3.1ms)
